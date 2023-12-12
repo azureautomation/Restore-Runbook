@@ -1,0 +1,20 @@
+{
+    "Author": "Shruti Omer",
+    "ContentSize": 6144,
+    "ContentUrl": "https://raw.githubusercontent.com/azureautomation/Restore-Runbook/main/Restore-Runbook.ps1",
+    "DownloadCount": 0,
+    "Id": "azureautomation/Restore-Runbook",
+    "IsFederated": true,
+    "IsWorkflow": false,
+    "Popularity": 4,
+    "RaterCount": 0,
+    "Rating": 0.0,
+    "ReleaseDate": "2023-12-12T00:00:00",
+    "RunbookKind": 5,
+    "RunbookKindString": "PowerShell",
+    "Summary": "This PowerShell script restores deleted runbooks in an Azure Automation account. It searches for deleted runbooks matching the provided names of the runbook and restores the most recent one.",
+    "Title": "Restore Automation Runbook",
+    "UpdatedDate": "2023-12-12T00:00:00",
+    "Url": "https://github.com/azureautomation/Restore-Runbook",
+    "UserTags": "Powershell, Azure Automation"
+}
