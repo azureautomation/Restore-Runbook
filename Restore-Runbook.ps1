@@ -8,6 +8,7 @@
     This PowerShell script is designed to restore deleted runbooks in an Azure Automation account. 
     It queries the Azure Automation API for deleted runbooks and, based on user input, 
     identifies and restores the specified runbooks.
+    Powershell 5.1 and Powershell 7.2 is recommended to run this script.
 
 .PARAMETER subscriptionId
     Required. Subscription of the Azure Automation account in which the runbook needs to be restored.
@@ -138,6 +139,7 @@ $sortedRunbooks = $filteredRunbooks | Sort-Object { [datetime]::Parse($_.propert
 foreach ($runbookName in $runbookNames) {
     Write-Output "Searching '$runbookName' in the deleted runbooks..."
     $matchingRunbooks = $sortedRunbooks | Where-Object { $_.name -eq $runbookName }
+    $matchingRunbooks = @($matchingRunbooks)
     if ($matchingRunbooks.Count -gt 0) {
         if ($matchingRunbooks.Count -gt 1) {
             Write-Warning "Multiple runbooks with name '$runbookName' found in the deleted runbooks. Restoring the most recent deleted runbook..."
